@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Monitor audio player</title>
+</head>
+
+<body style="font-family: sans-serif;">
+    <div style="display: flex; flex-flow: column wrap; align-items: baseline;">
+        <figure>
+            <figcaption>Audio file</figcaption>
+            <input id="fileInput" type="file" accept="audio/*" onchange="loadAudio()">
+        </figure>
+        <button onclick="canvas.requestFullscreen();">Fullscreen</button>
+    </div>
+    <div id="fullScreenArea">
+        <audio id="audioPlayer" controls></audio>
+        <canvas style="height: 480px;"></canvas>
+    </div>
+    <script src="player.js"></script>
+</body>
+
+</html>
